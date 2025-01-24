@@ -1,0 +1,17 @@
+code;name
+C-ZEITGES-0;Zeit
+C-HCGES-0;Gesundheitsleistungen_Güter (HC)
+F-HF1;HF.1 Finanzierungssystem Staat und verpflichtende Beitragssysteme der Gesundheitsfinanzierung
+F-HF11;HF.1.1 Finanzierungssystem Staat
+F-HF12;HF.1.2 Verpflichtende Beitragssysteme: Krankenversicherungssysteme
+F-HF121;HF.1.2.1 Finanzierungssystem Sozialversicherungsträger
+F-HF122;HF.1.2.2 Verpflichtende private Krankenversicherungssysteme
+F-HF2;HF.2 Freiwillige Systeme der Gesundheitsfinanzierung
+F-HF21;HF.2.1 Freiwillige Krankenversicherungssysteme
+F-HF22;HF.2.2 Finanzierungssystem Private Organisationen ohne Erwerbszweck
+F-HF23;HF.2.3 Finanzierungssystem Unternehmen
+F-HF3;HF.3 Selbstzahlungen der privaten Haushalte
+F-HF31;HF.3.1 Selbstzahlungen ohne Selbstbehalte
+F-HF32;HF.3.2 Selbstbehalte (Kostenteilung mit Dritten)
+F-HF4;HF.4 Finanzierungssystem übrige Welt
+F-ALLE_HF;Alle HF - Alle Finanzierungssysteme
