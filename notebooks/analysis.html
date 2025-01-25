@@ -7511,7 +7511,7 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f4f42d087f0c97db">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2a7b6c610965ff18">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7535,74 +7535,103 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=640b60960cf578b6">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a8cc5c075940e80a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="0.-Prerequisites">0. Prerequisites<a class="anchor-link" href="#0.-Prerequisites">¶</a></h2>
+<h1 id="1-Team">1 Team<a class="anchor-link" href="#1-Team">¶</a></h1><ul>
+<li>Itmam Alam</li>
+<li>Akos Papp</li>
+</ul>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=51cb6d1793b8361">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=54fe480b9cb69ead">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="2-Daten">2 Daten<a class="anchor-link" href="#2-Daten">¶</a></h1><p>The dataset is about <a href="https://data.statistik.gv.at/web/meta.jsp?dataset=OGD_gesausgaben01_HVD_HCHF_1">Laufende Gesundheitsausgaben (HC x HF)</a> which means current health expenditure.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9ae96db15c37187f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="2.1-Daten-Laden">2.1 Daten Laden<a class="anchor-link" href="#2.1-Daten-Laden">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a96f936797984400">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="kn">import</span> <span class="n">matshow</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=31c12ebe4167ebe3">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2066b02eaf1983f2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Cleanup (helps with debugging)</span>
-<span class="c1"># import subprocess</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dataframes</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">"data"</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">'.csv'</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">filename</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'OGD_gesausgaben01_HVD_HCHF'</span><span class="p">):</span> <span class="c1"># SCHEISS auf die anderen dateien</span>
+        <span class="k">continue</span>
+    <span class="n">df_</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">';'</span><span class="p">)</span>
+    <span class="n">df_name</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'.csv'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+    <span class="n">dataframes</span><span class="p">[</span><span class="n">df_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_</span>
 
-
-<span class="c1"># for dirname in "data/corr", "data/prep":</span>
-<span class="c1">#     if os.path.exists(dirname):</span>
-<span class="c1">#         subprocess.run(["rm", "-rf", dirname])</span>
-<span class="c1">#     os.makedirs(dirname)</span>
+<span class="n">df_main</span> <span class="o">=</span> <span class="n">dataframes</span><span class="p">[</span><span class="s1">'OGD_gesausgaben01_HVD_HCHF_1'</span><span class="p">]</span>
+<span class="n">df_hc</span> <span class="o">=</span> <span class="n">dataframes</span><span class="p">[</span><span class="s1">'OGD_gesausgaben01_HVD_HCHF_1_C-HCGES-0'</span><span class="p">]</span>
+<span class="n">df_time</span> <span class="o">=</span> <span class="n">dataframes</span><span class="p">[</span><span class="s1">'OGD_gesausgaben01_HVD_HCHF_1_C-ZEITGES-0'</span><span class="p">]</span>
+<span class="n">df_header</span> <span class="o">=</span> <span class="n">dataframes</span><span class="p">[</span><span class="s1">'OGD_gesausgaben01_HVD_HCHF_1_HEADER'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5c68bba4e46b4216">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5d71f8582ca8de21">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.-Datenanalyse">1. Datenanalyse<a class="anchor-link" href="#1.-Datenanalyse">¶</a></h2><h5 id="Warum-verwenden-wir-;-als-Delimiter?">Warum verwenden wir <code>;</code> als Delimiter?<a class="anchor-link" href="#Warum-verwenden-wir-;-als-Delimiter?">¶</a></h5><p>Die CSV-Dateien verwenden das Semikolon (<code>;</code>) als Trennzeichen (wir glauben um Verwechslungen mit Dezimalkommas zu vermeiden)</p>
+<h2 id="2.2-Initiale-Datenanalyse">2.2 Initiale Datenanalyse<a class="anchor-link" href="#2.2-Initiale-Datenanalyse">¶</a></h2><h5 id="Warum-verwenden-wir-;-als-Delimiter?">Warum verwenden wir <code>;</code> als Delimiter?<a class="anchor-link" href="#Warum-verwenden-wir-;-als-Delimiter?">¶</a></h5><p>Die CSV-Dateien verwenden das Semikolon (<code>;</code>) als Trennzeichen (wir glauben um Verwechslungen mit Dezimalkommas zu vermeiden)</p>
 <p>Daher muss beim Einlesen <code>delimiter=';'</code> explizit angegeben werden, um die Daten korrekt zu parsen.</p>
-<p>Später im Projekt werden wir Beistrich (<code>'.'</code>) als Delimiter verwenden, um die Daten zu speichern, da Pandas Kommas benötigt um Zahlen richtig zuu parsen.</p>
+<p>Später im Projekt werden wir Beistrich (<code>'.'</code>) als Delimiter verwenden, um die Daten zu speichern, da Pandas Kommas benötigt um Zahlen richtig zu parsen.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=bca9a5d1ebc7425">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4c666bbbe13600e1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">analyze_dataframe</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
@@ -7640,28 +7669,15 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=962b588f21465b9e">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b96c59033abe1c04">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">dataframes</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">"data"</span><span class="p">):</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">'.csv'</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">filename</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'OGD_gesausgaben01_HVD_HCHF'</span><span class="p">):</span> <span class="c1"># SCHEISS auf die anderen dateien</span>
-        <span class="k">continue</span>
-    <span class="n">df_</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">';'</span><span class="p">)</span>
-    <span class="n">df_name</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'.csv'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
-    <span class="n">dataframes</span><span class="p">[</span><span class="n">df_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_</span>
-
-<span class="n">df_main</span> <span class="o">=</span> <span class="n">dataframes</span><span class="p">[</span><span class="s1">'OGD_gesausgaben01_HVD_HCHF_1'</span><span class="p">]</span>
-<span class="n">df_hc</span> <span class="o">=</span> <span class="n">dataframes</span><span class="p">[</span><span class="s1">'OGD_gesausgaben01_HVD_HCHF_1_C-HCGES-0'</span><span class="p">]</span>
-<span class="n">df_time</span> <span class="o">=</span> <span class="n">dataframes</span><span class="p">[</span><span class="s1">'OGD_gesausgaben01_HVD_HCHF_1_C-ZEITGES-0'</span><span class="p">]</span>
-<span class="n">df_header</span> <span class="o">=</span> <span class="n">dataframes</span><span class="p">[</span><span class="s1">'OGD_gesausgaben01_HVD_HCHF_1_HEADER'</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">df_name</span><span class="p">,</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">dataframes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">df_name</span><span class="p">,</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">dataframes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="n">analyze_dataframe</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df_name</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -7871,99 +7887,99 @@ Stichprobe:
 </thead>
 <tbody>
 <tr>
-<th>126</th>
-<td>ZEITGES-2007</td>
-<td>HC-HC13</td>
-<td>4518,998</td>
-<td>839,227</td>
-<td>3679,771</td>
-<td>3679,771</td>
+<th>2</th>
+<td>ZEITGES-2004</td>
+<td>HC-HC4</td>
+<td>487,615</td>
+<td>36,592</td>
+<td>451,023</td>
+<td>451,023</td>
 <td>0,000</td>
-<td>100,741</td>
-<td>98,898</td>
-<td>1,843</td>
+<td>133,839</td>
 <td>0,000</td>
-<td>1731,602</td>
-<td>1572,439</td>
-<td>159,163</td>
+<td>133,839</td>
 <td>0,000</td>
-<td>6351,341</td>
+<td>110,471</td>
+<td>105,254</td>
+<td>5,218</td>
+<td>0,000</td>
+<td>731,925</td>
 </tr>
 <tr>
-<th>722</th>
-<td>ZEITGES-2022</td>
-<td>HC-HC63</td>
-<td>2059,683</td>
-<td>2009,362</td>
-<td>50,321</td>
-<td>50,321</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>2059,683</td>
-</tr>
-<tr>
-<th>641</th>
-<td>ZEITGES-2020</td>
-<td>HC-HC72</td>
-<td>869,692</td>
-<td>32,403</td>
-<td>837,289</td>
-<td>837,289</td>
-<td>0,000</td>
-<td>671,955</td>
-<td>671,955</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>0,000</td>
-<td>1541,647</td>
-</tr>
-<tr>
-<th>517</th>
+<th>508</th>
 <td>ZEITGES-2017</td>
-<td>HC-ALLE_HC</td>
-<td>28389,536</td>
-<td>11435,994</td>
-<td>16953,542</td>
-<td>16953,542</td>
+<td>HC-HC42</td>
+<td>203,118</td>
+<td>0,092</td>
+<td>203,026</td>
+<td>203,026</td>
 <td>0,000</td>
-<td>2619,123</td>
-<td>1953,858</td>
-<td>580,609</td>
-<td>84,656</td>
-<td>7345,969</td>
-<td>6623,612</td>
-<td>722,357</td>
+<td>7,427</td>
+<td>7,427</td>
 <td>0,000</td>
-<td>38354,628</td>
+<td>0,000</td>
+<td>43,636</td>
+<td>43,636</td>
+<td>0,000</td>
+<td>0,000</td>
+<td>254,182</td>
 </tr>
 <tr>
-<th>565</th>
-<td>ZEITGES-2019</td>
-<td>HC-ALL_HC</td>
-<td>31265,908</td>
-<td>12677,964</td>
-<td>18587,944</td>
-<td>18587,944</td>
+<th>717</th>
+<td>ZEITGES-2022</td>
+<td>HC-HC512</td>
 <td>0,000</td>
-<td>2923,195</td>
-<td>2144,573</td>
-<td>686,338</td>
-<td>92,284</td>
-<td>7461,851</td>
-<td>6732,759</td>
-<td>729,092</td>
 <td>0,000</td>
-<td>41650,955</td>
+<td>0,000</td>
+<td>0,000</td>
+<td>0,000</td>
+<td>37,217</td>
+<td>37,217</td>
+<td>0,000</td>
+<td>0,000</td>
+<td>1259,589</td>
+<td>1259,589</td>
+<td>0,000</td>
+<td>0,000</td>
+<td>1296,807</td>
+</tr>
+<tr>
+<th>446</th>
+<td>ZEITGES-2016</td>
+<td>HC-HC4</td>
+<td>746,170</td>
+<td>134,052</td>
+<td>612,118</td>
+<td>612,118</td>
+<td>0,000</td>
+<td>251,623</td>
+<td>13,230</td>
+<td>238,393</td>
+<td>0,000</td>
+<td>119,969</td>
+<td>108,380</td>
+<td>11,588</td>
+<td>0,000</td>
+<td>1117,761</td>
+</tr>
+<tr>
+<th>285</th>
+<td>ZEITGES-2011</td>
+<td>HC-HC41</td>
+<td>143,669</td>
+<td>0,082</td>
+<td>143,587</td>
+<td>143,587</td>
+<td>0,000</td>
+<td>0,000</td>
+<td>0,000</td>
+<td>0,000</td>
+<td>0,000</td>
+<td>40,090</td>
+<td>40,090</td>
+<td>0,000</td>
+<td>0,000</td>
+<td>183,759</td>
 </tr>
 </tbody>
 </table>
@@ -8328,11 +8344,11 @@ Stichprobe:
 </thead>
 <tbody>
 <tr>
-<th>13</th>
-<td>HC-HC12</td>
-<td>HC.1.2 Tagesfälle der kurativen Gesundheitsver...</td>
-<td>HC-HC1-HC2</td>
-<td>HC.1.2 Day curative care</td>
+<th>33</th>
+<td>HC-HC511</td>
+<td>HC.5.1.1 Verschriebene Arzneimittel</td>
+<td>HC-HC5</td>
+<td>HC.5.1.1 Prescribed medicines</td>
 <td>NaN</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -8341,11 +8357,11 @@ Stichprobe:
 <td>NaN</td>
 </tr>
 <tr>
-<th>44</th>
-<td>HC-HC72</td>
-<td>HC.7.2 Verwaltung der Gesundheitssystemfinanzi...</td>
+<th>43</th>
+<td>HC-HC71</td>
+<td>HC.7.1 Verwaltung der Gesundheitsversorgung</td>
 <td>HC-HC7</td>
-<td>HC.7.2 Administration of health financing</td>
+<td>HC.7.1 Governance and health system administra...</td>
 <td>NaN</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -8367,11 +8383,11 @@ Stichprobe:
 <td>NaN</td>
 </tr>
 <tr>
-<th>8</th>
-<td>HC-HC2</td>
-<td>HC.2 Leistungen der rehabilitativen Gesundheit...</td>
+<th>17</th>
+<td>HC-HC131</td>
+<td>HC.1.3.1 Allgemeine ambulante Gesundheitsverso...</td>
 <td>HC-HC1-HC2</td>
-<td>HC.2 Rehabilitative care</td>
+<td>HC.1.3.1 General outpatient curative care</td>
 <td>NaN</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -8380,11 +8396,11 @@ Stichprobe:
 <td>NaN</td>
 </tr>
 <tr>
-<th>23</th>
-<td>HC-HC14</td>
-<td>HC.1.4 Häusliche kurative Gesundheitsversorgung</td>
-<td>HC-HC1-HC2</td>
-<td>HC.1.4 Home-based curative care</td>
+<th>25</th>
+<td>HC-HC31</td>
+<td>HC.3.1 Stationäre Langzeitpflege</td>
+<td>HC-HC3</td>
+<td>HC.3.1 Inpatient long-term care (health)</td>
 <td>NaN</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -8723,50 +8739,11 @@ Stichprobe:
 </thead>
 <tbody>
 <tr>
-<th>11</th>
-<td>ZEITGES-2015</td>
-<td>2015</td>
+<th>7</th>
+<td>ZEITGES-2011</td>
+<td>2011</td>
 <td>NaN</td>
-<td>2015</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>2</th>
-<td>ZEITGES-2006</td>
-<td>2006</td>
-<td>NaN</td>
-<td>2006</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>8</th>
-<td>ZEITGES-2012</td>
-<td>2012</td>
-<td>NaN</td>
-<td>2012</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>12</th>
-<td>ZEITGES-2016</td>
-<td>2016</td>
-<td>NaN</td>
-<td>2016</td>
+<td>2011</td>
 <td>NaN</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -8780,6 +8757,45 @@ Stichprobe:
 <td>2007</td>
 <td>NaN</td>
 <td>2007</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>13</th>
+<td>ZEITGES-2017</td>
+<td>2017</td>
+<td>NaN</td>
+<td>2017</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>0</th>
+<td>ZEITGES-2004</td>
+<td>2004</td>
+<td>NaN</td>
+<td>2004</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>ZEITGES-2005</td>
+<td>2005</td>
+<td>NaN</td>
+<td>2005</td>
 <td>NaN</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -9145,49 +9161,10 @@ Stichprobe:
 </thead>
 <tbody>
 <tr>
-<th>12</th>
-<td>F-HF31</td>
-<td>HF.3.1 Selbstzahlungen ohne Selbstbehalte</td>
-<td>HF.3.1 Out-of-pocket excluding cost-sharing</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>4</th>
-<td>F-HF12</td>
-<td>HF.1.2 Verpflichtende Beitragssysteme: Kranken...</td>
-<td>HF.1.2 Compulsory contributory health insuranc...</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>11</th>
-<td>F-HF3</td>
-<td>HF.3 Selbstzahlungen der privaten Haushalte</td>
-<td>HF.3 Household out-of-pocket payment</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>10</th>
-<td>F-HF23</td>
-<td>HF.2.3 Finanzierungssystem Unternehmen</td>
-<td>HF.2.3 Enterprise financing schemes</td>
+<th>8</th>
+<td>F-HF21</td>
+<td>HF.2.1 Freiwillige Krankenversicherungssysteme</td>
+<td>HF.2.1 Voluntary health insurance schemes</td>
 <td>NaN</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -9201,6 +9178,45 @@ Stichprobe:
 <td>F-HF121</td>
 <td>HF.1.2.1 Finanzierungssystem Sozialversicherun...</td>
 <td>HF.1.2.1 Social health insurance schemes</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>F-HF1</td>
+<td>HF.1 Finanzierungssystem Staat und verpflichte...</td>
+<td>HF.1 Government schemes and compulsory contrib...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>0</th>
+<td>C-ZEITGES-0</td>
+<td>Zeit</td>
+<td>Time</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>C-HCGES-0</td>
+<td>Gesundheitsleistungen_Güter (HC)</td>
+<td>Health care functions (HC)</td>
 <td>NaN</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -9395,20 +9411,20 @@ dtype: int64</pre>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=56336aeaad7c6672">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bb3b37f6bf8ca1ae">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.1-Ergebnisse">1.1 Ergebnisse<a class="anchor-link" href="#1.1-Ergebnisse">¶</a></h3><h5 id="1.1.1-Hauptdatensatz-(Gesundheitsausgaben)"><strong>1.1.1 Hauptdatensatz (Gesundheitsausgaben)</strong><a class="anchor-link" href="#1.1.1-Hauptdatensatz-(Gesundheitsausgaben)">¶</a></h5><ul>
+<h2 id="2.3-Ergebnisse">2.3 Ergebnisse<a class="anchor-link" href="#2.3-Ergebnisse">¶</a></h2><h5 id="2.3.1-Hauptdatensatz-(Gesundheitsausgaben)"><strong>2.3.1 Hauptdatensatz (Gesundheitsausgaben)</strong><a class="anchor-link" href="#2.3.1-Hauptdatensatz-(Gesundheitsausgaben)">¶</a></h5><ul>
 <li><strong>Anzahl:</strong> 729 Zeilen, 16 Spalten.</li>
 <li><strong>Datentypen:</strong> Alle Spalten sind vom Typ <code>object</code>. Möglicherweise wurden numerische Werte nicht richtig erkannt.</li>
 <li><strong>Null Werte:</strong> Keine Null Werte.</li>
 <li><strong>TODO:</strong> Überprüfung der Datenformate (z. B. Zahlen als Text) und Konvertierung in numerische Typen.</li>
 </ul>
 <hr/>
-<h5 id="1.1.2-Gesundheitsleistungen-und--g%C3%BCter-(HC)"><strong>1.1.2 Gesundheitsleistungen und -güter (HC)</strong><a class="anchor-link" href="#1.1.2-Gesundheitsleistungen-und--g%C3%BCter-(HC)">¶</a></h5><ul>
+<h5 id="2.3.2-Gesundheitsleistungen-und--g%C3%BCter-(HC)"><strong>2.3.2 Gesundheitsleistungen und -güter (HC)</strong><a class="anchor-link" href="#2.3.2-Gesundheitsleistungen-und--g%C3%BCter-(HC)">¶</a></h5><ul>
 <li><strong>Anzahl:</strong> 46 Zeilen, 10 Spalten.</li>
 <li><strong>Null Werte:</strong><ul>
 <li>Spalten <code>de_desc</code>, <code>de_link</code>, <code>en_desc</code>, <code>en_link</code>, <code>de_syn</code>, <code>en_syn</code> enthalten ausschließlich fehlende Werte und sollten entfernt werden.</li>
@@ -9422,7 +9438,7 @@ dtype: int64</pre>
 </li>
 </ul>
 <hr/>
-<h5 id="1.1.3-Zeitreihen-der-Gesundheitsausgaben"><strong>1.1.3 Zeitreihen der Gesundheitsausgaben</strong><a class="anchor-link" href="#1.1.3-Zeitreihen-der-Gesundheitsausgaben">¶</a></h5><ul>
+<h5 id="2.3.3-Zeit-der-Gesundheitsausgaben"><strong>2.3.3 Zeit der Gesundheitsausgaben</strong><a class="anchor-link" href="#2.3.3-Zeit-der-Gesundheitsausgaben">¶</a></h5><ul>
 <li><strong>Anzahl:</strong> 19 Zeilen, 10 Spalten.</li>
 <li><strong>Null Werte:</strong><ul>
 <li>Die Spalte <code>Unnamed: 2</code> enthält nur <code>NaN</code>-Werte und sollte entfernt werden.</li>
@@ -9440,7 +9456,7 @@ dtype: int64</pre>
 </li>
 </ul>
 <hr/>
-<h5 id="1.1.4-Header-Metadaten"><strong>1.1.4 Header-Metadaten</strong><a class="anchor-link" href="#1.1.4-Header-Metadaten">¶</a></h5><ul>
+<h5 id="2.3.4-Header-Metadaten"><strong>2.3.4 Header-Metadaten</strong><a class="anchor-link" href="#2.3.4-Header-Metadaten">¶</a></h5><ul>
 <li><strong>Anzahl:</strong> 16 Zeilen, 10 Spalten.</li>
 <li><strong>Null Werte:</strong><ul>
 <li>Unbenannte Spalten <code>Unnamed: 3</code> bis <code>Unnamed: 9</code> enthalten ausschließlich Null Werte und können entfernt werden.</li>
@@ -9455,24 +9471,37 @@ dtype: int64</pre>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=355fc0dca0bac9df">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b3c04b4f62a733b3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.2-Konvertierung-der-Daten-in-numerische-Werte">1.2 Konvertierung der Daten in numerische Werte<a class="anchor-link" href="#1.2-Konvertierung-der-Daten-in-numerische-Werte">¶</a></h3><ul>
+<h1 id="3-Datenbereinigung">3 Datenbereinigung<a class="anchor-link" href="#3-Datenbereinigung">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=140adc4bb7c5a547">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="3.1-Konvertierung-der-Daten-in-numerische-Werte">3.1 Konvertierung der Daten in numerische Werte<a class="anchor-link" href="#3.1-Konvertierung-der-Daten-in-numerische-Werte">¶</a></h2><p>Der main Datensatz verwendet <code>,</code> anstatt von <code>.</code> für die Zahlen und muss umformatiert werden.
+Es hat keine null Werte.</p>
+<ul>
 <li>Pandas kann nur in nummern  umwandeln, wenn die Daten korrekt formatiert sind. mit einem shcieß , gehts ned.</li>
 </ul>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d9f493dd022304ad">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ee729f19c44665de">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># TWO DAYS AND 10 CHIPS PACKETS AND 50 COFFES LATER WE DISCOVERED THAT THE DATA IS NOT NUMERIC AND WE NEED TO REPLACE , WITH . AND CONVERT TO NUMERIC</span>
@@ -9481,7 +9510,6 @@ dtype: int64</pre>
 <span class="c1"># THIS IS NOT WORKING</span>
 
 <span class="c1"># SO WE NEED TO DO IT MANUALLY</span>
-<span class="c1"># WE JUST SAVE THE DATAFRAME TO CSV AND READ IT AGAIN</span>
 
 <span class="c1"># F*ck it, we save the data to csv and read it again</span>
 
@@ -9529,28 +9557,28 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e34244086b76cdf5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=46ee42a9ee78f02">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.3-Bereinigung-der-Sprach--und-Null-Spalten">1.3 Bereinigung der Sprach- und Null-Spalten<a class="anchor-link" href="#1.3-Bereinigung-der-Sprach--und-Null-Spalten">¶</a></h3><ul>
+<h2 id="3.2-Bereinigung-der-Sprach--und-Null-Spalten">3.2 Bereinigung der Sprach- und Null-Spalten<a class="anchor-link" href="#3.2-Bereinigung-der-Sprach--und-Null-Spalten">¶</a></h2><ul>
 <li>In den Datensätzen sind Spalten in deutscher und english. Da die englischen Spalten redundant sind, werden sie entfernt.</li>
 <li>Zusätzlich werden alle vollständig leeren Spalten aus den Daten gelöscht.</li>
 </ul>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a70895070c3078b9">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=8422c0de21511d0f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">clean_df</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">clean_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">--- Bereinigung für </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> ---</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 
     <span class="c1"># 1. Englische Spalten entfernen (beginnen mit 'en_')</span>
@@ -9604,13 +9632,13 @@ Bereinigte Datei für OGD_gesausgaben01_HVD_HCHF_1_HEADER gespeichert als OGD_ge
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=62846e627f987e88">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2f4c077028ef955b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.4-Ersetzung-von-Codes-durch-Namen">1.4 Ersetzung von Codes durch Namen<a class="anchor-link" href="#1.4-Ersetzung-von-Codes-durch-Namen">¶</a></h3><ul>
+<h2 id="3.3-Ersetzung-von-Codes-durch-Namen">3.3 Ersetzung von Codes durch Namen<a class="anchor-link" href="#3.3-Ersetzung-von-Codes-durch-Namen">¶</a></h2><ul>
 <li><p>Die Spalten <code>C-ZEITGES-0</code> und <code>C-HCGES-0</code> im Hauptdatensatz werden durch verständliche Namen ersetzt. Dies geschieht mit Mapping aus den Metadaten <del>(ahhhhh dafür sind sie da).</del></p>
 </li>
 <li><p>Bevor das getan werden kann, mappen wir die Oberkategorien in der HC-GES Datei auf die Unterkategorien, da sie mittels FK mit der Oberkat. verknüpft sind.</p>
@@ -9625,12 +9653,12 @@ Bereinigte Datei für OGD_gesausgaben01_HVD_HCHF_1_HEADER gespeichert als OGD_ge
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f52ad21cbf2654cf">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a0cdfab39be2a92f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># korrigierte dfs aus dem letzen Schritt laden</span>
@@ -9643,12 +9671,12 @@ Bereinigte Datei für OGD_gesausgaben01_HVD_HCHF_1_HEADER gespeichert als OGD_ge
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1f56c90943507cbe">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2d6f1dbb73957114">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># --- 1. Mapping für 'C-HCGES-0' mit df_hc_corr ---</span>
@@ -9663,57 +9691,39 @@ Bereinigte Datei für OGD_gesausgaben01_HVD_HCHF_1_HEADER gespeichert als OGD_ge
 <span class="n">header_mapping</span> <span class="o">=</span> <span class="n">df_header_corr</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'code'</span><span class="p">)[</span><span class="s1">'name'</span><span class="p">]</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
 <span class="n">df_main_corr</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">header_mapping</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="n">df_main_corr</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/corr/OGD_gesausgaben01_HVD_HCHF_1_corr.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df_main_corr</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/corr/korr.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2662ce478753d9ba">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bf0a6800270688dd">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="2.-Datenvorbereitung">2. Datenvorbereitung<a class="anchor-link" href="#2.-Datenvorbereitung">¶</a></h2><h5 id="1.-Numerische-Werte">1. Numerische Werte<a class="anchor-link" href="#1.-Numerische-Werte">¶</a></h5><ul>
+<h1 id="4.-Datenvorbereitung">4. Datenvorbereitung<a class="anchor-link" href="#4.-Datenvorbereitung">¶</a></h1><h2 id="4.1-Numerische-Werte">4.1 Numerische Werte<a class="anchor-link" href="#4.1-Numerische-Werte">¶</a></h2><ul>
 <li>Enthält alle Spalten mit numerischen Daten (z. B. <code>int64</code>, <code>float64</code>).</li>
 <li>Diese Daten werden extrahiert und in einer separaten Datei gespeichert.</li>
 <li><strong>Dateiname:</strong> <code>num.csv</code></li>
 </ul>
-<h5 id="2.-Nominale-Werte">2. Nominale Werte<a class="anchor-link" href="#2.-Nominale-Werte">¶</a></h5><ul>
-<li>Enthält alle kategorialen und textbasierten Daten (z. B. <code>category</code>, <code>object</code>).</li>
-<li>Diese Werte werden extrahiert und separat gespeichert.</li>
-<li><strong>Dateiname:</strong> <code>nom.csv</code></li>
-</ul>
-<h5 id="3.-Normalisierte-Werte">3. Normalisierte Werte<a class="anchor-link" href="#3.-Normalisierte-Werte">¶</a></h5><ul>
-<li>Für eine bessere Vergleichbarkeit und Skalierung werden die numerischen Daten normalisiert.</li>
-<li>Die Min-Max-Normalisierung wird verwendet, um die Werte in den Bereich von 0 bis 1 zu bringen.</li>
-<li><strong>Dateiname:</strong> <code>norm.csv</code></li>
-</ul>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cc9b98e635ce5557">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4343a71b96aea9a7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Numerische Werte extrahieren</span>
 <span class="n">df_main_corr</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 <span class="n">df_numeric</span> <span class="o">=</span> <span class="n">df_main_corr</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">'int64'</span><span class="p">,</span> <span class="s1">'float64'</span><span class="p">])</span>
 <span class="n">df_numeric</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/prep/num.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="c1"># Nominale Werte extrahieren (kategorische und objektbasierte Spalten)</span>
-<span class="n">df_nominal</span> <span class="o">=</span> <span class="n">df_main_corr</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">'category'</span><span class="p">,</span> <span class="s1">'object'</span><span class="p">])</span>
-<span class="n">df_nominal</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/prep/nom.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="c1"># Normalisierung der numerischen Werte (Min-Max-Normalisierung)</span>
-<span class="n">df_normalized</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_numeric</span> <span class="o">-</span> <span class="n">df_numeric</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">df_numeric</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">df_numeric</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
-<span class="n">df_normalized</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/prep/norm.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9755,13 +9765,86 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=70a98096">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8a6cddfd072bd08d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="3.-Visualisierung">3. Visualisierung<a class="anchor-link" href="#3.-Visualisierung">¶</a></h2><p>Farbpalletten aus:</p>
+<h2 id="4.2-Nominale-Werte">4.2 Nominale Werte<a class="anchor-link" href="#4.2-Nominale-Werte">¶</a></h2><ul>
+<li>Enthält alle kategorialen und textbasierten Daten (z. B. <code>category</code>, <code>object</code>).</li>
+<li>Diese Werte werden extrahiert und separat gespeichert.</li>
+<li><strong>Dateiname:</strong> <code>nom.csv</code></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8eb6044b13f722ee">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Nominale Werte extrahieren (kategorische und objektbasierte Spalten)</span>
+<span class="n">df_nominal</span> <span class="o">=</span> <span class="n">df_main_corr</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">'category'</span><span class="p">,</span> <span class="s1">'object'</span><span class="p">])</span>
+<span class="n">df_nominal</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/prep/nom.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ed47b83d1c9e286d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="4.3-Normalisierte-Werte">4.3 Normalisierte Werte<a class="anchor-link" href="#4.3-Normalisierte-Werte">¶</a></h2><ul>
+<li>Für eine bessere Vergleichbarkeit und Skalierung werden die numerischen Daten normalisiert.</li>
+<li>Die Min-Max-Normalisierung wird verwendet, um die Werte in den Bereich von 0 bis 1 zu bringen.</li>
+<li><strong>Dateiname:</strong> <code>norm.csv</code></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4e0898c3ce91ee89">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Normalisierung der numerischen Werte (Min-Max-Normalisierung)</span>
+<span class="n">df_normalized</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_numeric</span> <span class="o">-</span> <span class="n">df_numeric</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">df_numeric</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">df_numeric</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="n">df_normalized</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data/prep/norm.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6b0467199d273bbb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="5.-Visualisierung">5. Visualisierung<a class="anchor-link" href="#5.-Visualisierung">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4f00d07a3df7df4e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="5.1-Farbpalette">5.1 Farbpalette<a class="anchor-link" href="#5.1-Farbpalette">¶</a></h2><p>Farbpalletten aus:</p>
 <ul>
 <li><a href="https://seaborn.pydata.org/tutorial/color_palettes.html">https://seaborn.pydata.org/tutorial/color_palettes.html</a></li>
 <li><a href="https://www.practicalpythonfordatascience.com/ap_seaborn_palette">https://www.practicalpythonfordatascience.com/ap_seaborn_palette</a></li>
@@ -9770,13 +9853,13 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7de26044">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f705933597057dce">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
+<h2 id="5.2-Korrelationen">5.2 Korrelationen<a class="anchor-link" href="#5.2-Korrelationen">¶</a></h2><ul>
 <li><p><strong>Hohe Korrelation innerhalb ähnlicher Finanzierungsarten:</strong></p>
 <ul>
 <li>zb Staatliche und verpflichtende Systeme korrelieren stark (&gt;0,95)</li>
@@ -9801,12 +9884,12 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=55dce279">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2fc8167a0d0e57a3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
@@ -9831,25 +9914,46 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f750579bd967ebcc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=93dec3d7">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">matshow</span><span class="p">(</span><span class="n">df_main_corr</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">corr</span><span class="p">())</span> <span class="c1"># alternative, nicht so detailiert aber übersichtlicher</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;matplotlib.image.AxesImage at 0x1e9778acc50&gt;</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
+<img alt="No description has been provided for this image" class="" src="data:image/png;base64,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"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e7f482f12e4d0b56">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.2-Pairplot-zur-Untersuchung-der-Beziehungen">3.2 Pairplot zur Untersuchung der Beziehungen<a class="anchor-link" href="#3.2-Pairplot-zur-Untersuchung-der-Beziehungen">¶</a></h3>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1311dd54">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
+<h2 id="5.3-Pairplot-zur-Untersuchung-der-Beziehungen">5.3 Pairplot zur Untersuchung der Beziehungen<a class="anchor-link" href="#5.3-Pairplot-zur-Untersuchung-der-Beziehungen">¶</a></h2><ul>
 <li><p><strong>Lineare Zusammenhänge:</strong></p>
 <ul>
 <li>Mehrheit der Finanzierungsarten zeigen lineare Beziehungen</li>
@@ -9874,12 +9978,12 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=16c4f111">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=18e06bac7a0d3212">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df_main_corr</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:],</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s2">"kde"</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">"bone"</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"Gesundheitsleistungen_Güter (HC)"</span><span class="p">)</span>
@@ -9902,24 +10006,13 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cb5f6ebb">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a0cecec9390364ae">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.3-Box-vs-Violinplot">3.3 Box vs Violinplot<a class="anchor-link" href="#3.3-Box-vs-Violinplot">¶</a></h3>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=eb177e84">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
+<h2 id="5.4-Box-vs-Violinplot">5.4 Box vs Violinplot<a class="anchor-link" href="#5.4-Box-vs-Violinplot">¶</a></h2><ul>
 <li><strong>Ausreißer:</strong><ul>
 <li>Boxplot zeigt mehr Ausreißer als Violinplot</li>
 </ul>
@@ -9937,19 +10030,19 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4c2e4bef">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a7d92c79b12471f3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># subplot mit Boxplot und Violinplot</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="c1"># iloc[:, 2:] um nur numerische Werte zu verwenden</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_main_corr</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:],</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">palette</span><span class="o">=</span><span class="s2">"YlGnBu"</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">"log"</span><span class="p">)</span>  <span class="c1"># Logarithmische Skalierung weil sonst di Boxen zu klein sind hätte man vllt NORMALISIEREN sollen</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">"log"</span><span class="p">)</span>  <span class="c1"># Logarithmische Skala weil sonst di Boxen zu klein sind, hätte man vllt NORMALISIEREN sollen</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Boxplot der Finanzierungsarten (log-Skala)"</span><span class="p">)</span>
 
 <span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_main_corr</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:],</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">palette</span><span class="o">=</span><span class="s2">"YlGnBu"</span><span class="p">)</span>
@@ -9975,35 +10068,39 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=495b7141">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=862fdc1d498d6d0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.4-Histogramm-/-KDE-Plot">3.4 Histogramm / KDE-Plot<a class="anchor-link" href="#3.4-Histogramm-/-KDE-Plot">¶</a></h3>
+<h2 id="5.5-Histogramm-/-KDE-Plot">5.5 Histogramm / KDE-Plot<a class="anchor-link" href="#5.5-Histogramm-/-KDE-Plot">¶</a></h2>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4b36e2ab">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=eb4b804d90ecfdb9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li>Die Erkenntnisse zeigen, dass die Gesundheitsfinanzierung hauptsächlich von staatlichen und verpflichtenden Systemen getragen wird</li>
+<li>freiwillige und internationale Beiträge spielen eine untergeordnete Rolle</li>
+</ul>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f72392ab">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9fba7570bc282a37">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># mit KDE (Kernel Density Estimation) sieht es nicht gut aus, </span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># mit KDE (Kernel Density Estimation) sieht es nicht gut aus, deshalb haben wir es ausgelassen</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_main_corr</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">multiple</span><span class="o">=</span><span class="s2">"stack"</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">"viridis"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Histogramm der Finanzierungsarten"</span><span class="p">)</span>
@@ -10028,13 +10125,13 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=88590dee">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ecec0c6a6d0cc87a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.5-Scatterplot">3.5 Scatterplot<a class="anchor-link" href="#3.5-Scatterplot">¶</a></h3><ul>
+<h2 id="5.6-Scatterplot">5.6 Scatterplot<a class="anchor-link" href="#5.6-Scatterplot">¶</a></h2><ul>
 <li><strong>Finanzierungsarten:</strong><ul>
 <li>Staatliche und verpflichtende Systeme zeigen lineare Korrlationen</li>
 </ul>
@@ -10043,18 +10140,18 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=65781ca9">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6bf35366e53bc72c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Scatterplot mit Farbverlauf</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_main_corr</span><span class="p">[</span><span class="s2">"HF.1.1 Finanzierungssystem Staat"</span><span class="p">],</span> 
-                <span class="n">y</span><span class="o">=</span><span class="n">df_main_corr</span><span class="p">[</span><span class="s2">"HF.1.2.1 Finanzierungssystem Sozialversicherungsträger"</span><span class="p">],</span> 
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_main_corr</span><span class="p">[</span><span class="s2">"HF.1.1 Finanzierungssystem Staat"</span><span class="p">],</span>
+                <span class="n">y</span><span class="o">=</span><span class="n">df_main_corr</span><span class="p">[</span><span class="s2">"HF.1.2.1 Finanzierungssystem Sozialversicherungsträger"</span><span class="p">],</span>
                 <span class="n">hue</span><span class="o">=</span><span class="n">df_main_corr</span><span class="p">[</span><span class="s2">"HF.1.1 Finanzierungssystem Staat"</span><span class="p">],</span>  <span class="c1"># oder eine andere Spalte für den Farbverlauf</span>
                 <span class="n">palette</span><span class="o">=</span><span class="s2">"viridis"</span><span class="p">,</span>
                 <span class="n">edgecolor</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="c1"># keine weißen ränder um die Punkte</span>
@@ -10081,13 +10178,13 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e4883a18">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=43e029d5b9663555">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.6-Linien--und-Balkendiagramme">3.6 Linien- und Balkendiagramme<a class="anchor-link" href="#3.6-Linien--und-Balkendiagramme">¶</a></h3><ul>
+<h2 id="5.7-Linien--und-Balkendiagramme">5.7 Linien- und Balkendiagramme<a class="anchor-link" href="#5.7-Linien--und-Balkendiagramme">¶</a></h2><ul>
 <li><strong>"Analyse":</strong><ul>
 <li>Steigende Tendenz über die Jahre</li>
 <li>Ruckartigee Anstieg zwischen 2020 und 2021</li>
@@ -10106,12 +10203,12 @@ memory usage: 91.3+ KB
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6a9d8f53">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f6c55a4cf93f8d07">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Daten gruppieren und summieren</span>
