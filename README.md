@@ -83,6 +83,3 @@ If necessary (or explain why not needed):
 
 Summarize key findings, model performance insights, and potential next steps or applications of the models. Include reflections on what worked well and what could be improved.
 
-<small>**Disclaimer**</small>
-
-<small>This README.md has been translated by ChatGPT.</small>
